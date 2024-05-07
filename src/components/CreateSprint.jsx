@@ -69,7 +69,7 @@ const CreateSprint = () => {
             <div className='flex justify-evenly items-center my-2'>
               {/* Mapping over the sprintTypes array to generate radio buttons */}
               {sprintTypes.map(type => (
-                <label key={type} className='radio-container w-1/4 bg-orange-200 rounded-full'>
+                <label key={type} className='radio-container w-1/4 bg-green rounded-full'>
                   <span className='px-2 py-1 text-sm flex justify-center gap-1 items-center'>{type}
                     <input type="radio" name='sprinttype' value={type} onChange={handleChange} />
                   </span>
@@ -78,7 +78,7 @@ const CreateSprint = () => {
             </div>
           </div>
           <div className='text-center'>
-            <button type="submit" className='px-8 py-2 bg-purple-400 text-white mt-4 rounded-full'>Create</button>
+            <button type="submit" className='px-8 py-2 bg-navyblue text-white mt-4 rounded-full'>Create</button>
           </div>
         </form>
       </div>

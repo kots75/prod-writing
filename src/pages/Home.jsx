@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <img className='w-full' src={banner} />
+        <img className='w-full min-h-[70vh] object-cover' src={banner} />
       </div>
       <div className='flex flex-col flex-wrap content-center m-2'>
         {

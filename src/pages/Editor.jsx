@@ -14,7 +14,7 @@ const closeSprintModal =  () => {
 }
   return (
     <section className='px-4 bg-gray-200 min-h-[90vh]'>
-        <button className='px-4 py-1 rounded-full bg-red-200' onClick={openSprintModal}>Create Sprint</button>
+        <button className='px-4 py-1 rounded-full bg-green' onClick={openSprintModal}>Create Sprint</button>
         {
             sprintmodal && <Overlay onClose={closeSprintModal}><CreateSprint/></Overlay>
         }
