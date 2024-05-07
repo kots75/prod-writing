@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import CreateSprint from '../components/CreateSprint';
+import Overlay from '../components/Overlay';
 
 const Editor = () => {
 const [sprintmodal,setSprintModal]= useState(false);
@@ -15,7 +16,7 @@ const closeSprintModal =  () => {
     <>
         <button className='px-4 py-1 rounded-full bg-red-200' onClick={openSprintModal}>Create Sprint</button>
         {
-            sprintmodal && <CreateSprint/>
+            sprintmodal && <Overlay onClose={closeSprintModal}><CreateSprint/></Overlay>
         }
     </>
   )

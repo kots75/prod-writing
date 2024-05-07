@@ -32,7 +32,7 @@ setPopup(false);
         </div>
     </header>
     {
-        popup && <Overlay onClick={closePopup}>{<Login onClose={closePopup}/>}</Overlay>
+        popup && <Overlay onClose={closePopup}>{<Login/>}</Overlay>
     }
     </>
   )
