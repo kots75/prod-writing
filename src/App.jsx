@@ -7,11 +7,12 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Editor from './pages/Editor';
+import Header from './components/Header';
 
 const App = () => {
   return (
     <>
-    <Navbar/>
+    <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/signup' element={<Signup/>}/>
