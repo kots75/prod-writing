@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Overlay from './Overlay';
+import Login from './Login';
 
 const Navbar = () => {
+    const [popup,setPopup] = useState(false);
+    const openPopup =()=>{
+setPopup(true);
+    }
+    const closePopup =()=>{
+setPopup(false);
+    }
   return (
+    <>
     <header>
         <div className='max-w-6xl mx-auto p-4 flex justify-between items-center gap-5'>
         <Link to="/" className="site-logo w-1/5">Writing Productivity</Link>
         <nav className='flex justify-end items-center w-2/5'>
             <ul className='flex justify-between items-center gap-2 '>
                 <li>
-                    <Link to="/signup" className='px-4 py-2 rounded-full bg-green-500 text-white cursor-pointer hover:opacity-90'>Signup</Link>
-                </li>
-                <li>
-                    <Link to="/login" className='px-4 py-2 rounded-full bg-red-500 text-white cursor-pointer hover:opacity-90'>Login</Link>
+                    <button onClick={openPopup} className='px-4 py-2 rounded-full bg-red-500 text-white cursor-pointer hover:opacity-90'>Login</button>
                 </li>
                 <li>
                     <Link to="/dashboard" className='px-4 py-2 rounded-full bg-yellow-500 text-white cursor-pointer hover:opacity-90'>Dashboard</Link>
@@ -24,6 +31,10 @@ const Navbar = () => {
         </nav>
         </div>
     </header>
+    {
+        popup && <Overlay onClick={closePopup}>{<Login onClose={closePopup}/>}</Overlay>
+    }
+    </>
   )
 }
 
